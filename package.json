@@ -1,0 +1,18 @@
+{
+  "name": "amazon.cypress",
+  "version": "1.0.0",
+  "description": "Cenario de teste feito em Gherkin e automatizado com cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "silvacleanne"
+  },
+  "author": "Cleanne",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.0.0"
+  }
+}
