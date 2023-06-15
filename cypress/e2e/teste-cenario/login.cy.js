@@ -54,7 +54,7 @@ describe('Acessar o site da Amazon fazendo login', ()=> {
 
     })
 
-    it('Login o campo do email em branco', () => {
+    it('Login com o campo do email em branco', () => {
         // Dado que eu esteja na página de login
         // Quando deixar o campo obrigatório em branco
         // E clicar no botão "Continuar"
@@ -67,7 +67,7 @@ describe('Acessar o site da Amazon fazendo login', ()=> {
 
     })
     
-    it.only('Login o campo senha em branco', () => {
+    it('Login o campo senha em branco', () => {
         // Dado que eu esteja na página de login
         // E preencha o campo de email com "teste@gmail.com"
         // E clicar no botão "Continuar"

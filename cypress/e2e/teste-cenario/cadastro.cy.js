@@ -5,6 +5,46 @@ describe('Fazer Cadastro', ()=> {
         cy.visit('/')
     })
 
+    it('Cadastro de um novo usuário válido', () => {
+        // Dado que estou na página de cadastro da Amazon
+        // Quando preencher os campos obrigatórios corretamente
+        // E clicar no botão "Cadastrar"
+        // Então devo ser redirecionado para a página inicial logado como usuário
+        // E devo receber uma mensagem de confirmação de cadastro
+
+        cy.get('#nav-link-accountList > .nav-line-2').click()
+        cy.get('#createAccountSubmit').click()
+        cy.get('#ap_customer_name').type('Cleanne Silva')//insira o nome
+        cy.get('#ap_email').type('scleanne346@gmail.com')//insira o usuario
+        cy.get('#ap_password').type('M@lu2018')//insira senha
+        cy.get('.a-alert-inline-info > .a-box-inner > .a-alert-content').should('contain.text', 'As senhas devem ter pelo menos 6 caracteres.')
+        cy.get('#ap_password_check').type('M@lu2018')//repita a senha
+        cy.get('#continue').click()
+        cy.wait(15000)
+        cy.get('#cvf-input-code').type('7972534')// Substitua código de verificação pelo que foi enviado para o email
+        cy.get('#cvf-submit-otp-button > .a-button-inner > .a-button-input').click()
+        cy.get('#glow-ingress-line1').should('contain.text', 'Óla')
+    })
+
+    it.only('Cadastro de um novo usuário com e-mail já existente', () => {
+        // Dado que estou na página de cadastro da Amazon
+        // Quando preencher os campos obrigatórios 
+        // E o e-mail já estiver registrado no sistema
+        // E clicar no botão "Cadastrar"
+        // Então devo ver uma mensagem de erro informando que o e-mail já está em uso
+
+        cy.get('#nav-link-accountList > .nav-line-2').click()
+        cy.get('#createAccountSubmit').click()
+        cy.get('#ap_customer_name').type('Cleanne Silva')//insira o nome
+        cy.get('#ap_email').type('scleanne346@gmail.com')//insira o usuario
+        cy.get('#ap_password').type('M@lu2018')//insira senha
+        cy.get('.a-alert-inline-info > .a-box-inner > .a-alert-content').should('contain.text', 'As senhas devem ter pelo menos 6 caracteres.')
+        cy.get('#ap_password_check').type('M@lu2018')//repita a senha
+        cy.get('#continue').click()
+        cy.get('.a-spacing-large > .a-box > .a-box-inner > .a-alert-heading').should('contain.text', 'O endereço de e-mail já está sendo utilizado')
+    })
+
+
     it('Cadastro de um novo usuário com campos em branco', () => {
         // Dado que estou na página de cadastro da Amazon
         // Quando deixar os campos obrigatórios em branco
