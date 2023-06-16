@@ -14,11 +14,11 @@ describe('Fazer Cadastro', ()=> {
 
         cy.get('#nav-link-accountList > .nav-line-2').click()
         cy.get('#createAccountSubmit').click()
-        cy.get('#ap_customer_name').type('Cleanne Silva')//insira o nome
-        cy.get('#ap_email').type('scleanne346@gmail.com')//insira o usuario
-        cy.get('#ap_password').type('M@lu2018')//insira senha
+        cy.get('#ap_customer_name').type('usuario')//insira o nome
+        cy.get('#ap_email').type('teste@gmail.com')//insira o usuario
+        cy.get('#ap_password').type('123')//insira senha
         cy.get('.a-alert-inline-info > .a-box-inner > .a-alert-content').should('contain.text', 'As senhas devem ter pelo menos 6 caracteres.')
-        cy.get('#ap_password_check').type('M@lu2018')//repita a senha
+        cy.get('#ap_password_check').type('123')//repita a senha
         cy.get('#continue').click()
         cy.wait(15000)
         cy.get('#cvf-input-code').type('7972534')// Substitua código de verificação pelo que foi enviado para o email
@@ -35,9 +35,9 @@ describe('Fazer Cadastro', ()=> {
 
         cy.get('#nav-link-accountList > .nav-line-2').click()
         cy.get('#createAccountSubmit').click()
-        cy.get('#ap_customer_name').type('Cleanne Silva')//insira o nome
-        cy.get('#ap_email').type('scleanne346@gmail.com')//insira o usuario
-        cy.get('#ap_password').type('M@lu2018')//insira senha
+        cy.get('#ap_customer_name').type('usuario')//insira o nome
+        cy.get('#ap_email').type('teste@gmail.com')//insira o usuario
+        cy.get('#ap_password').type('123')//insira senha
         cy.get('.a-alert-inline-info > .a-box-inner > .a-alert-content').should('contain.text', 'As senhas devem ter pelo menos 6 caracteres.')
         cy.get('#ap_password_check').type('M@lu2018')//repita a senha
         cy.get('#continue').click()
@@ -74,8 +74,8 @@ describe('Fazer Cadastro', ()=> {
 
         cy.get('#nav-link-accountList > .nav-line-2').click()
         cy.get('#createAccountSubmit').click()
-        cy.get('#ap_customer_name').type('Cleanne Silva')
-        cy.get('#ap_email').type('scleanne346@gmail.com')
+        cy.get('#ap_customer_name').type('usuario')
+        cy.get('#ap_email').type('teste@gmail.com')
         cy.get('#ap_password').type('12')
         cy.get('.a-alert-inline-info > .a-box-inner > .a-alert-content').should('contain.text', 'As senhas devem ter pelo menos 6 caracteres.')
         cy.get('#ap_password_check').type('12')
@@ -93,11 +93,11 @@ describe('Fazer Cadastro', ()=> {
 
         cy.get('#nav-link-accountList > .nav-line-2').click()
         cy.get('#createAccountSubmit').click()
-        cy.get('#ap_customer_name').type('Cleanne Silva')
-        cy.get('#ap_email').type('scleanne346@.com')
-        cy.get('#ap_password').type('M@lu2018')
+        cy.get('#ap_customer_name').type('usuario')
+        cy.get('#ap_email').type('teste@.com')
+        cy.get('#ap_password').type('123')
         cy.get('.a-alert-inline-info > .a-box-inner > .a-alert-content').should('contain.text', 'As senhas devem ter pelo menos 6 caracteres.')
-        cy.get('#ap_password_check').type('M@lu2018')
+        cy.get('#ap_password_check').type('123')
         cy.get('#continue').click()
         cy.get('#auth-email-invalid-claim-alert > .a-box-inner > .a-alert-content')
         .should('contain.text', 'Endereço de e-mail ou número de telefone celular errado ou inválido. Corrija e tente novamente.')
