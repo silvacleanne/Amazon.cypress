@@ -1,0 +1,39 @@
+[
+    {
+      "email": "peter.quill@alura.com.br",
+      "fullName": "Peter Jason Quill",
+      "userName": "senhor_das_estrelas",
+      "password": "hibrido"
+    },
+    {
+      "email": "gamora@alura.com.br",
+      "fullName": "Gamora Zen Whoberi Ben Titan",
+      "userName": "gamora",
+      "password": "zenwhoberi"
+    },
+    {
+      "email": "rocket.raccoon@alura.com.br",
+      "fullName": "Rocket Raccoon",
+      "userName": "rocket",
+      "password": "mamifero"
+    },
+    {
+      "email": "groot@alura.com.br",
+      "fullName": "Groot",
+      "userName": "groot",
+      "password": "colossusfloral"
+    }
+    ,
+    {
+      "email": "drax@alura.com.br",
+      "fullName": "Drax",
+      "userName": "drax",
+      "password": "humanoreforcado"
+    },
+    {
+      "email": "youndu@alura.com.br",
+      "fullName": "Yondu Udonta",
+      "userName": "youndu",
+      "password": "centauriano"
+    }
+  ]
