@@ -37,9 +37,9 @@ describe('Fazer Cadastro', ()=> {
         cy.get('#nav-link-accountList').trigger('mouseover').click()
         cy.get('#createAccountSubmit').click() 
         cy.get('#ap_customer_name').type('Cle')//insira o nome
-        cy.get('#ap_email').type('scleanne346@gmail.com')//insira o usuario
-        cy.get('#ap_password').type('Senha123')//insira senha
-        cy.get('#ap_password_check').type('Senha123')//repita a senha
+        cy.get('#ap_email').type('teste@gmail.com')//insira o usuario
+        cy.get('#ap_password').type('123')//insira senha
+        cy.get('#ap_password_check').type('123')//repita a senha
         cy.get('#continue').click()
         
         cy.contains('Já existe uma conta com esse e-mail').should('be.visible')
@@ -72,7 +72,7 @@ describe('Fazer Cadastro', ()=> {
         cy.get('#nav-link-accountList').trigger('mouseover').click()
         cy.get('#createAccountSubmit').click()
         cy.get('#ap_customer_name').type('Cle')//insira o nome
-        cy.get('#ap_email').type('scleanne346@gmail.com')//insira o usuario
+        cy.get('#ap_email').type('teste@gmail.com')//insira o usuario
         cy.get('#ap_password').type('123')//insira senha
         cy.get('#ap_password_check').type('123')//repita a senha
         cy.get('#continue').click()
@@ -90,8 +90,8 @@ describe('Fazer Cadastro', ()=> {
         cy.get('#createAccountSubmit').click()
         cy.get('#ap_customer_name').type('Cle')//insira o nome)
         cy.get('#ap_email').type('teste@.com')
-        cy.get('#ap_password').type('Senha123')//insira senha
-        cy.get('#ap_password_check').type('Senha123')//repita a senha
+        cy.get('#ap_password').type('123')//insira senha
+        cy.get('#ap_password_check').type('123')//repita a senha
         cy.get('#continue').click()
         cy.contains('Endereço de e-mail ou número de telefone celular errado ou inválido. Corrija e tente novamente.')
         .should('be.visible')
@@ -108,8 +108,8 @@ describe('Fazer Cadastro', ()=> {
         cy.get('#nav-link-accountList').trigger('mouseover').click()
         cy.get('#createAccountSubmit').click()
         cy.get('#ap_customer_name').type('Cle')//insira o nome)
-        cy.get('#ap_email').type('scleanne346@gmail.com')
-        cy.get('#ap_password').type('P@ssei123')//insira senha
+        cy.get('#ap_email').type('teste@gmail.com')
+        cy.get('#ap_password').type('123')//insira senha
         cy.get('#ap_password_check').type('P@ssei')//repita a senha
         cy.get('#continue').click()
         cy.contains('As senhas não são iguais').should('be.visible')
@@ -126,7 +126,7 @@ describe('Fazer Cadastro', ()=> {
         cy.get('#nav-link-accountList').trigger('mouseover').click()
         cy.get('#createAccountSubmit').click()
         cy.get('#ap_customer_name').type('Cle')//insira o nome)
-        cy.get('#ap_email').type('scleanne346gmail.com')
+        cy.get('#ap_email').type('testegmail.com')
         cy.get('#ap_password').type('....')//insira senha
         cy.get('#ap_password_check').type('....')//repita a senha
         cy.get('#continue').click()
